@@ -545,6 +545,7 @@
 <div *ngFor="let at of lists">
   <a [href]="at.url" target="_self">{{at.title}}</a>
   <app-likes></app-likes><hr/>
+  <button type="button" (click)="deleteArticle()">Delete Article</button>
 </div>
 <hr>
 
