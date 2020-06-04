@@ -6,17 +6,20 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  id: number;
   title: string;
   url: string;
   lists = [];
-  addArticle(){
-    this.lists.push({title: this.title, url: this.url});
+
+  addArticle() {
+    this.lists.push({id: this.id, title: this.title, url: this.url});
+    this.id = Number('');
     this.title = '';
     this.url = '';
   }
-  deleteArticle(){
+
+  deleteArticle() {
     this.lists.pop();
-  }
 //   article = [{
 //     title: 'The Evolution of Async JavaScript: From Callbacks, to Promises, to Async/Await',
 //     url: 'https://medium.freecodecamp.org/the-evolution-of-async-javascript-from-callbacks-to-promises-to-async-await-e73b047f2f40'
@@ -38,8 +41,9 @@ export class AppComponent {
 //     url: 'https://ruslanspivak.com/lsbaws-part1/'
 // }];
 
-  // updateArticle(){
-  //   this.article.title = (document.getElementById('title') as HTMLInputElement).value;
-  //   this.article.url = (document.getElementById('url') as HTMLInputElement).value;
-  // }
+    // updateArticle(){
+    //   this.article.title = (document.getElementById('title') as HTMLInputElement).value;
+    //   this.article.url = (document.getElementById('url') as HTMLInputElement).value;
+    // }
+  }
 }

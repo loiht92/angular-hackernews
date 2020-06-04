@@ -531,7 +531,9 @@
 
 <h2>TODAY'S ARTICLE !</h2><hr/>
 
-
+<label for="title">Id:</label><br/>
+<label for="id"></label><textarea [(ngModel)]="id" cols="70" id="id"></textarea>
+<br/>
 <label for="title">Title:</label><br/>
 <textarea [(ngModel)]="title" cols="70" id="title"></textarea>
 <br/>
@@ -543,6 +545,7 @@
 
 
 <div *ngFor="let at of lists">
+  <span>{{at.id}}</span><br/>
   <a [href]="at.url" target="_self">{{at.title}}</a>
   <app-likes></app-likes><hr/>
   <button type="button" (click)="deleteArticle()">Delete Article</button>
