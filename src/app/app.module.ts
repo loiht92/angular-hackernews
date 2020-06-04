@@ -3,17 +3,17 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LikesComponent } from './likes/likes.component';
-import { AddArticleComponent } from './add-article/add-article.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LikesComponent,
-    AddArticleComponent
+    LikesComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
